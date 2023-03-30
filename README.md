@@ -21,6 +21,4 @@ It is A Car Rental Website developed using Django Framework
   <li>Can Add New Car</li>
   <li>Can Add New Location</li>
 </ul>
-<b>See the Demonstration of this project</b><br/>
-<a href="https://youtu.be/Wo88AHZcz5s">https://youtu.be/Wo88AHZcz5s</a>
 
