@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% block title %} Rent Cars {% endblock %}
+{% block css %}
+{% endblock %}
+{% block body %}
+
+<style>
+  .alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.alert-success {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+}
+
+.alert-danger {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+</style>
+
+<div class="container mt-4">
+    <div>
+      <style>
+        body{
+          background-color: rgba(255, 255, 18, 0.83);
+        }
+      </style>
+      <div class="container mt-4">
+          <div>
+            <center>
+              <img src="/static/photos/home-img.png" alt="">
+            <h1 class="display-4">Online Car Rental System</h1>
+            <p class="lead">You can select from the wide range of Cars availabe.</p>
+          </center>
+
+      <center>
+
+    <div class="row mt-4">
+{% for car in cars %}
+      <div class="col-sm-4 mt-4">
+        <div class="card" style="width: 20rem; height: 24rem;">
+          <img class="card-img-top" src="/media/{{car.image}}" alt="Card image cap" height="260px">
+          <div class="card-body">
+            <h5 class="card-title"><b>Car Name: {{car.name}}</h5></b>
+            <h6 class="card-text"><b>Car Dealer: <b>{{car.car_dealer}}</b></h6></b>
+            <h6 class="card-text">Car location: <b>{{car.location}}</b></h6>
+            <p class="card-text"><b>Rent: ₹{{car.rent}} per day</p></b>
+            <a href="/customer_login/" class="btn btn-primary">Login to View a new Car</a>
+            <!-- <input class="btn btn-dark" type="submit" value="Rent Now"> -->
+
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+    </center>
+
+{% endblock %}
+
